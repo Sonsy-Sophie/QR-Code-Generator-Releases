@@ -1,0 +1,4 @@
+racingvalkyrie\model\QRCodeModel.class
+racingvalkyrie\service\QRCodeService.class
+racingvalkyrie\controller\MainController.class
+racingvalkyrie\Main.class

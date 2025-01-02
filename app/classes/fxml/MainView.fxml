@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+        fx:controller="racingvalkyrie.controller.MainController">
+     <!-- Top Menu Bar -->
+    <top>
+        <MenuBar>
+        <Menu text="File" style="-fx-text-fill: #ff69b4;">
+                <MenuItem text="Save As..." style="-fx-text-fill: #ff69b4;" onAction="#saveButtonClick"/>
+                <SeparatorMenuItem />
+                <MenuItem text="Exit" style="-fx-text-fill: #ff69b4;" onAction="#handleExit" />
+            </Menu>
+            <Menu text="Help" style="-fx-text-fill: #ff69b4;">
+                <MenuItem text="About" style="-fx-text-fill: #ff69b4;" onAction="#handleAbout" />
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Left Sidebar -->
+    <left>
+        <VBox spacing="10" alignment="TOP_CENTER" style="-fx-padding: 10; -fx-background-color: #2e2e2e;">
+            <ImageView fx:id="logoImageView" fitWidth="100" preserveRatio="true" />
+            <TextField fx:id="urlTextField" promptText="Enter URL here..." style="-fx-background-color: #1e1e1e; -fx-text-fill: #ff69b4;"/>
+            <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+                <Button fx:id="submitButton"  onAction="#submitButtonClick"  text="Submit" style="-fx-background-color: #ff69b4; -fx-text-fill: #1e1e1e;"/>
+                <Button fx:id="saveButton"  onAction="#saveButtonClick"  text="Save" style="-fx-background-color: #ff69b4; -fx-text-fill: #1e1e1e;" disable="true"/>
+            </HBox>
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <StackPane style="-fx-padding: 20;">
+            <ImageView fx:id="qrCodeImage" fitWidth="300" fitHeight="300" preserveRatio="true" visible="false"/>
+        </StackPane>
+    </center>
+
+    <!-- Footer -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-padding: 10; -fx-background-color: #2e2e2e;">
+            <Label text="© 2025 RacingValkyrie" style="-fx-font-size: 12; -fx-text-fill: #ff69b4;" />
+        </HBox>
+    </bottom>
+    
+</BorderPane>
